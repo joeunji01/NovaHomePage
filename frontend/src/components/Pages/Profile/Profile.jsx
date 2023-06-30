@@ -31,20 +31,27 @@ text-align : center;
 font-size : 20px;
 width : 100px;
 height : 40px;
-background-color : rgb(36,147,191); 
-margin : auto;
-display : inline-block;
-
+margin : 0 auto;
+display : inline-block, center;
 `
 
+//background-color : ${({ Ycolor }) => Ycolor ? 'rgb(36,147,191)': 'rgb(27,87,166)'};
 
 export default function Profile() {
+    const [Y22color,sety22color] = useState(false);
+    const [Y23color,sety23color] = useState(true);
+    const onClick =()=> {sety22color(!Y22color); sety23color(!Y23color)};
+    if (Y22color===true){
+        'rgb(36,147,191)'
+    }
+
     return (
+      
       <div>
         <Title>동아리 회원</Title>
         <Hr></Hr>
-        <Year>2022</Year>
-        <Year>2023</Year>
+        <Year onClick={onClick} >2022</Year>
+        <Year onClick={onClick}>2023</Year>
 
 
         
