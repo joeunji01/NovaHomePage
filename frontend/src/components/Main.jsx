@@ -1,7 +1,9 @@
 import React from 'react'
+import Profile from './Pages/Profile/Profile'
 
 export default function Main() {
   return (
-    <div>여기디가가</div>
+    <div>
+    </div>
   )
 }
