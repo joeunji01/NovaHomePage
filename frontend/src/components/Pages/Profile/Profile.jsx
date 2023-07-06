@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import styled from '@emotion/styled'
+import { jsx } from '@emotion/react'
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+  @import urlimport { jsx } from '@emotion/react'
+('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 </style>
 
 const Title = styled.div`
@@ -29,32 +31,39 @@ const Year = styled.div`
 font-family: 'Noto Sans KR', sans-serif;
 text-align : center;
 font-size : 20px;
+justify-content: center;
 width : 100px;
 height : 40px;
 margin : 0 auto;
+margin-left: 2px;
+margin-right: 2px;
 display : inline-block, center;
+background-color : rgb(36,147,191);
+border-radius: 10px;
+
 `
+
+
 
 //background-color : ${({ Ycolor }) => Ycolor ? 'rgb(36,147,191)': 'rgb(27,87,166)'};
 
+
 export default function Profile() {
-    const [Y22color,sety22color] = useState(false);
-    const [Y23color,sety23color] = useState(true);
-    const onClick =()=> {sety22color(!Y22color); sety23color(!Y23color)};
-    if (Y22color===true){
-        'rgb(36,147,191)'
-    }
+    const [Ycolor,setycolor] = useState(true);
+    const onClick =()=> {setycolor(!Ycolor)}
+
 
     return (
       
-      <div>
+      <div styled={"margin:0 auto"}>
         <Title>동아리 회원</Title>
         <Hr></Hr>
-        <Year onClick={onClick} >2022</Year>
-        <Year onClick={onClick}>2023</Year>
+        <div styled={"text-align:center"}>
+        <Year>2022</Year>
+        <Year>2023</Year>
+        </div>
 
-
-        
+      
       </div>
     )
   }
