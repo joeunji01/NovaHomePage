@@ -2,6 +2,8 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import styled from '@emotion/styled'
 import { jsx } from '@emotion/react'
+import  {ReactComponent as Phone} from './svg/Phone.svg'
+import profile from './profiles.json'
 <style>
   @import urlimport { jsx } from '@emotion/react'
 ('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
@@ -43,14 +45,25 @@ border-radius: 10px;
 
 `
 
+const Profilebox = styled.div`
+  background-color: rgb(255,255,255,90%);
+  width: 450px;
+  height: 200px;
+  border-radius: 10px;
+  font-family: 'Noto Sans KR', 'sans-serif';
+  font-size: 16px;
+  border: 1px solid black;
 
+
+`
 
 //background-color : ${({ Ycolor }) => Ycolor ? 'rgb(36,147,191)': 'rgb(27,87,166)'};
 
 
 export default function Profile() {
     const [Ycolor,setycolor] = useState(true);
-    const onClick =()=> {setycolor(!Ycolor)}
+    const onClick =()=> {setycolor(!Ycolor)};
+
 
 
     return (
@@ -61,7 +74,12 @@ export default function Profile() {
         <div styled={"text-align:center"}>
         <Year>2022</Year>
         <Year>2023</Year>
+        <br/><br/>
         </div>
+        <Profilebox>
+        <Array/>
+        <Phone/>
+        </Profilebox>
 
       
       </div>
